@@ -1,8 +1,107 @@
+body {
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(180, 173, 97, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
 .hero-title {
   text-align: center;
   font-weight: bold;
 }
 
 .hero-text {
-  border-bottom: 2px solid antiquewhite 0.5;
+  border-bottom: 4px solid rgba(221, 221, 221, 0.5);
+}
+
+.bottom {
+  text-align: center;
+}
+
+.container {
+  border: 2px solid black;
+  width: 95%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  border: 1px solid lightgray;
+  background-color: whitesmoke;
+  border-radius: 6px;
+  width: 400px;
+  margin: auto;
+  padding: 0 35px;
+  font-size: 1rem;
+  font-weight: 100;
+  box-shadow: 0 2px 4px black;
+}
+
+.calculator input {
+  box-sizing: border-box;
+  width: 90%;
+  padding: 8px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  /* border: top left radius 0;
+  border: bottom left radius 0; */
+}
+
+.calculator button {
+  width: 10%;
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.calculator button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#quality {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
+#tip-amount {
+  visibility: hidden;
+  min-width: 250px;
+  margin: auto;
+  background-color: green;
+  color: aliceblue;
+  bottom: 40px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px;
+  position: fixed;
+}
+
+#tip-amount.show {
+  visibility: visible;
+  /* -webkit-animation: fadein: 0.5s, fadeout: 0.5s 2.5s; */
+  animation: fadein 0.5s fadeout 0.5s 2.5s;
+}
+
+@media (max-width: 480px) {
+  .calculator input {
+    width: 85%;
+  }
+
+  .calculator button {
+    width: 15%;
+  }
+}
+
+@media (max-width: 320px) {
+  .calculator input {
+    width: 80%;
+  }
 }
